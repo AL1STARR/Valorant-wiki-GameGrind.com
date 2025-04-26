@@ -1,0 +1,481 @@
+@import url('https://fonts.cdnfonts.com/css/valorant');
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+@media (max-width: 768px) {
+    .video-container {
+        clip-path: polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px));
+    }
+    .video-container::after {
+        font-size: 1rem;
+        left: 10px;
+    }
+    .video-container iframe {
+      height: 200px;
+    }
+    .media-wrapper {
+        flex-direction: column;
+    }
+    .valorant-logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+@keyframes zoomFade {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.site-header {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 40px;
+    transform-origin: top left;
+}
+
+.header-container {
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+.search-form input[type="search"] {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+  
+.search-form input[type="search"]:focus {
+    outline: none;
+    border-color: #007bff;
+    width: 250px;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.search-form button:hover {
+    color: red;
+}
+  
+.nav-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 120px; /* Space for logo background */
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 1rem; /* Reduced space between nav items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    font-family: 'Minecraft', sans-serif;
+    font-size: 1.2rem; /* Reduced nav text size */
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+.main-nav a:hover {
+    color: #ddd;
+    background: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+    border-radius: 3px;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(0, 167, 22);
+    padding: 0.5rem 2rem 1rem 20px;
+    border-radius: 0 4px 4px 0;
+    z-index: 1001;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-family: 'Minecraft', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    line-height: 1;
+    text-align: center;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: 
+    linear-gradient(rgba(250, 68, 84, 0.2), rgba(250, 68, 84, 0.2)), url(Val.jpg) center/cover no-repeat, linear-gradient(bottom, transparent, black 300px);
+    background-color: black;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    background: 
+        url(Val.jpg) center/cover fixed;
+    z-index: -1;
+    animation: zoomFade 20s infinite alternate;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, 
+        transparent 60%, 
+        rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.content {
+    padding: 5rem;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.content-holder {
+    max-width: 90%;
+    margin: 5rem auto;
+    padding: 3rem;
+    background-color: rgba(6, 0, 34, 0.918);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-holder h1 {
+    color: white;
+    border-bottom: 5px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.content-holder p {
+    color: white;
+    border-bottom: 5px solid #ddd;
+    padding-bottom: 30px;
+}
+
+.content-holder ul {
+    color: white;
+    border-bottom: 5px solid #ddd;
+    padding-bottom: 30px;
+}
+
+.content-holder em {
+    font-style: italic;
+}
+
+.valo-font{
+    font-family: VALORANT, bold;
+}
+
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-parent-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    border-bottom: 5px solid #ddd;
+    padding-bottom: 30px;
+}
+
+.parent-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.parent-link {
+    color: white;
+    font-size: 20px;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: #fa4454;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease !important;
+    order: -1;
+    margin-right: 15px;
+    transform: rotate(0deg) !important;
+}
+
+.dropdown-parent.active .dropdown-toggle {
+    transform: rotate(180deg) !important;
+}
+
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 35px;
+    right: auto;
+    top: -10;
+    background: rgba(6, 0, 34, 0.95);
+    border: 2px solid #fa4454;
+    border-radius: 4px;
+    padding: 10px;
+    min-width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease 0.3s, visibility 0s linear 0.6s;
+    transform: translateY(-10px);
+    visibility: hidden;
+}
+
+.dropdown-parent.active .dropdown-submenu {
+    display: block;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.dropdown-submenu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-submenu::-webkit-scrollbar-thumb {
+    background: #fa4454;
+    border-radius: 4px;
+}
+
+.dropdown-submenu li {
+    margin: 8px 0;
+}
+
+.dropdown-submenu a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 6px 12px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.dropdown-submenu a:hover {
+    background-color: rgba(250, 68, 84, 0.2);
+    transform: translateX(5px);
+}
+
+.video-container {
+    flex: 1;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: visible;
+    width: 90%;
+    border: 2px solid rgba(250, 68, 84, 0.5);
+    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.5) 50%, rgba(255,255,255,0.05) 100%);
+    clip-path: polygon(0 20px, 20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px));
+    padding: 8px;
+    position: relative;
+    z-index: 0;
+}
+
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #fa4454;
+    clip-path: polygon(0 20px, 20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px));
+    z-index: -1;
+}
+
+.video-container::after {
+    content: 'VALORANT';
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-family: 'VALORANT', sans-serif;
+    color: #fa4454;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(250,68,84,0.5);
+    background: black;
+    padding: 0 10px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+.media-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.valorant-logo {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(250, 68, 84, 0.5));
+}
+
+.valorant-logo:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #000000;
+    color: #00ff00;
+    padding: 40px 20px;
+    margin-top: 45px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Socials {
+    text-align: left;
+    margin-right: 40px;
+}
+
+.Socials h1 {
+    color: #cc0000;
+    font-size: 6rem;
+    margin-bottom: 10px;
+    font-family: Minecraft, bold;
+}
+
+.Socials p {
+    color: #0062ff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #00ff00;
+}
+
+.links {
+    text-align: right;
+    margin-left: 40px;
+}
+
+.links h2 {
+    color: gold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 8px;
+}
+
+.links a {
+    color: #f1faee;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
